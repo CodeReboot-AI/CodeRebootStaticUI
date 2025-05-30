@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Request Demo - CodeReboot</title>
+        <link rel="icon" href="../assets/utility/images/logo/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="../assets/utility/styles/utility.css">
+    </head>
+    <body>
+        <div class="app-wrapper app-index">  
+            <header class="c-app__header">
+                <div class="app-container c-app__header-inner">
+                    <div class="c-app__header-brand">
+                        <div class="-logo"><img src="../assets/utility/images/logo/mlogo.png" alt="logo" role="presentation" /></div>
+                        <a href="01-index.html"><span class="c-app__header-title">CodeReboot</span></a>
+                    </div>
+                    <div role="navigation">
+                        <ul class="c-app__header-banner" >
+                            <li class="c-app__header-banner-item">
+                                <a href="04-services.html" class="c-app__header-item" role="button" title="Services">Services</a>
+                            </li>
+                            <li class="c-app__header-banner-item">
+                                <a href="05-about-us.html" class="c-app__header-item" role="button" title="About us">About us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="c-app__header-nav">
+                        <a href="01-index.html" role="button" class="o-primary-button -custom">Get a Demo</a>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="app-wrap">
+                <div class="c-CodeReboot-login" style="height: calc(100vh - 160px); overflow: hidden;">
+                    <div class="app-container">
+                        <div style="display: flex; justify-content: center; gap: 40px; height: 100%; padding: 40px 0;">
+                            <!-- Left side - Sales info -->
+                            <div style="flex: 0 0 500px;">
+                                <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); height: 100%;">
+                                    <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 16px;">Talk to our Sales team</h2>
+                                    <p style="color: #666; margin-bottom: 32px; line-height: 1.6;">Book a demo and set up a trial Enterprise account to see how CodeReboot's scalable features can accelerate your business growth and app development.</p>
+                                    
+                                    <div>
+                                        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 24px;">Why choose CodeReboot?</h3>
+                                        <div style="display: grid; gap: 16px;">
+                                            <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px;">
+                                                <img src="../assets/utility/images/code-transformation/info.png" alt="Security" style="width: 32px; height: 32px;">
+                                                <span style="font-weight: 500;">Enterprise-grade security</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px;">
+                                                <img src="../assets/utility/images/code-transformation/info.png" alt="Performance" style="width: 32px; height: 32px;">
+                                                <span style="font-weight: 500;">High performance infrastructure</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px;">
+                                                <img src="../assets/utility/images/code-transformation/info.png" alt="Cost" style="width: 32px; height: 32px;">
+                                                <span style="font-weight: 500;">Cost-effective solutions</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right side - Demo form -->
+                            <div style="flex: 0 0 500px;">
+                                <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); height: 100%;">
+                                    <h1 style="font-size: 24px; font-weight: 600; margin-bottom: 8px;">Request a Demo</h1>
+                                    <p style="color: #666; margin-bottom: 32px;">Fill in the details below and our team will reach out to you shortly.</p>
+                                    
+                                    <form id="demoForm" onsubmit="sendEmail(event)">
+                                        <div style="display: grid; gap: 24px;">
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                                <div>
+                                                    <label style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500;">First name*</label>
+                                                    <input type="text" name="firstName" required 
+                                                        style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                                                </div>
+                                                <div>
+                                                    <label style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500;">Last name*</label>
+                                                    <input type="text" name="lastName" required 
+                                                        style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <label style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500;">Work email*</label>
+                                                <input type="email" name="email" required 
+                                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                                            </div>
+
+                                            <div>
+                                                <label style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500;">Message*</label>
+                                                <textarea name="message" rows="4" required
+                                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; resize: vertical;"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div style="margin-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 12px; color: #666;">* Required fields</span>
+                                            <button type="submit" class="o-primary-button -custom" 
+                                                style="min-width: 140px; background: #9146ff;">Request Demo</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="c-app__footer">
+                <div class="c-app__footer-inner app-container">
+                    <div class="c-app__footer-left">
+                        <div class="c-app__footer-logoWrap">
+                            <img src="../assets/utility/images/logo/logo.png" class="c-app__footer-logo" alt="CodeReboot">
+                            <div class="c-app__footer-appName">CodeReboot</div>
+                        </div>
+                                    <div class="c-app__footer-about">
+                <p class="c-app__footer-about-text">
+                   CodeReboot is a next-generation startup built by world-class experts in Generative AI, DevOps, multi-cloud, and modern application architecture.
+We specialize in helping enterprises transform legacy systems into future-ready platforms, blending AI-driven automation with deep engineering expertise.
+Our mission is to accelerate innovation, reduce complexity, and unlock real business value through intelligent, secure, and scalable software modernization
+                </p>
+                <!-- <div class="c-app__footer-stats">
+                    <div class="stats-item">
+                        <strong>5M+</strong><br>
+                        Lines of CodeRebooterated
+                    </div>
+                    <div class="stats-item">
+                        <strong>98%</strong><br>
+                        Success Rate
+                    </div>
+                    <div class="stats-item">
+                        <strong>24/7</strong><br>
+                        Expert Support
+                    </div>
+                </div> -->
+            </div>
+                    </div>
+                    <div class="c-app__footer-right">
+                         <div class="c-app__footer-block">
+                            <div class="c-app__footer-links">
+                                <div class="c-app__footer-title">Application Design & Development</div>
+                                <a href="02-02-code-conversion.html" class="c-app__footer-link">Code Conversion</a>
+                                <a href="02-01-code-upgrade.html" class="c-app__footer-link">Code Migration</a>
+                                <a href="02-03-code-generation.html" class="c-app__footer-link">Code Generation</a>
+                            </div>
+                        </div>
+                        <div class="c-app__footer-block">
+                            <div class="c-app__footer-links">
+                                <div class="c-app__footer-title">Cloud Design & Development</div>
+                                <a href="javascript:;" class="c-app__footer-link">Infra as-is blueprint</a>
+                                <a href="javascript:;" class="c-app__footer-link">Diagram to Code</a>
+                                <a href="javascript:;" class="c-app__footer-link">IaC to IaC migration</a>
+                            </div>
+                        </div>
+                        <div class="c-app__footer-block">
+                            <div class="c-app__footer-links">
+                                <div class="c-app__footer-title">DevOps Platforms and pipelines</div>
+                                <a href="javascript:;" class="c-app__footer-link">Platform and pipeline</a>
+                                <a href="javascript:;" class="c-app__footer-link">Pipeline generation</a>
+                                <a href="javascript:;" class="c-app__footer-link">Pipeline migration</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <footer class="c-footer">
+                <div class="c-footer__inner app-container">
+                    <div class="c-footer__legalDeclaration">
+                        Copyright 2025 CodeReboot. All rights reserved
+                    </div>
+                    <div class="c-footer__legalStatements">
+                        <a href="javascript:;" class="">Terms of Use</a>
+                        <a href="javascript:;">Privacy Statement</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="../assets/utility/scripts/utility.js"></script>
+        <script>
+            function sendEmail(event) {
+                event.preventDefault();
+                
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData);
+                
+                const body = `
+First Name: ${data.firstName}
+Last Name: ${data.lastName}
+Email: ${data.email}
+Message: ${data.message}
+                `.trim();
+
+                window.location.href = `mailto:sree88.dev@gmail.com?subject=Demo Request from ${data.firstName} ${data.lastName}&body=${encodeURIComponent(body)}`;
+            }
+        </script>
+    </body>
+</html>

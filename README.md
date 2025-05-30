@@ -1,2 +1,4 @@
-# CodeRebootStaticUI
-static UI content for CodeReboot.ai portal
+Readme.MD
+---------
+CodeReboot UI
+
